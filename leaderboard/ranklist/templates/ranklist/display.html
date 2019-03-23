@@ -1,0 +1,12 @@
+
+
+{% if top_ten_teams %}
+<ul>
+    {% for team in top_ten_teams %}
+    <li>{{ team.player_1 }} and {{ team.player_2 }} : {{ team.score }}</li>
+    {% endfor %}
+</ul>
+
+{% else %}
+    <h3>You don't have any teams.</h3>
+{% endif %}
