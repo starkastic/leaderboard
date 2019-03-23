@@ -22,7 +22,9 @@ def input(request):
                 team_2 = Team(player_1 = request.POST['player_12'], player_2 = request.POST['player_22'])
             score_1 = request.POST['score_1']
             score_2 = request.POST['score_2']
-            if score_1 > score_2:
+            if score_1 == score_2:
+                #do nothing
+            else if score_1 > score_2:
                 team_1.score = team_1.score + 3
                 team_2.score = team_2.score - 1
             else:
